@@ -15,7 +15,7 @@
     <!--  Includo l'header del sito web con il menu tramite un partial -->
     @include('partials.header')
 
-    <main>
+    <main class="d-flex align-items-center">
         @yield('content')
     </main>
 
