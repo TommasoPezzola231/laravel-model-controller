@@ -11,7 +11,10 @@ class PageController extends Controller
 {
     public function index() {
 
-        $movies = Movie::all();
+        /***  $movies = Movie::all() ***/
+
+        $movies = Movie::where('vote', '>', 8)
+                ->orderBy('vote', 'desc')->get();
 
 
         return view('welcome', compact('movies'));
